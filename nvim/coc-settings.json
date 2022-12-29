@@ -1,0 +1,5 @@
+{
+    "tsserver.log" : "verbose",
+     "tsserver.npm": "/usr/bin/npm"
+
+}
