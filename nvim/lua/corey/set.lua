@@ -1,41 +1,45 @@
-local opt = vim.opt
-
 vim.g.mapleader = " "
 
-opt.guicursor = ""
-
-opt.nu = true
-opt.relativenumber = true
-
-opt.errorbells = false
-
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.smartindent = true
-
-opt.wrap = false
-
-opt.hlsearch = false
-opt.incsearch = true
-
-opt.scrolloff = 8
-opt.updatetime = 50
+vim.opt.guicursor = ""
 
 
-opt.scrolloff = 8
+-- Set highlight on search
+vim.o.hlsearch = false
 
-opt.swapfile = false
-opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-opt.undofile = true
+-- Make line numbers default
+vim.wo.number = true
+vim.opt.relativenumber = true
 
-opt.termguicolors = true
-opt.background = "dark"
+-- Enable mouse mode
+vim.o.mouse = 'a'
 
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+-- Enable break indent
+vim.o.breakindent = true
 
-opt.splitright = true
-opt.splitbelow = true
+-- Save undo history
+vim.o.undofile = true
 
+-- Case insensitive searching UNLESS /C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- Decrease update time
+vim.o.updatetime = 250
+vim.wo.signcolumn = 'yes'
+
+-- Setup tab stops
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+vim.opt.wrap = false
+
+vim.opt.scrolloff = 8
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME").. "/.vim/undodir"
+
+vim.opt.clipboard:append("unnamedplus")
