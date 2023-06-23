@@ -2,7 +2,8 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "<leaderdf", vim.cmd.Ex)
+keymap.set("n", "<leader>df", vim.cmd.Ex)
+keymap.set("n", "<leader>t", vim.cmd.Prettier)
 
 
 -- used to move highlighted lines up or down. 
@@ -43,7 +44,7 @@ keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>") -- toggle file explorer
 
 
 -- Diagnostic keymaps

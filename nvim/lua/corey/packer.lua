@@ -18,8 +18,7 @@ use { -- LSP Configuration & Plugins
       'folke/neodev.nvim',
     },
   }
-
- use { -- Autocompletion
+use { -- Autocompletion
     'hrsh7th/nvim-cmp',
     requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   }
@@ -35,6 +34,10 @@ use { -- Additional text objects via treesitter
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   }
+
+  -- prettier Setup
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
@@ -59,6 +62,8 @@ use { -- Additional text objects via treesitter
 
   use 'nvim-tree/nvim-web-devicons' -- vs-code like icons
   use 'tomasr/molokai' -- Color Scheme
+
+  use 'mattn/emmet-vim' -- Emmet snippets
 
   end)
 
